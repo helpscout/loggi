@@ -1,0 +1,34 @@
+{
+  "name": "loggi",
+  "version": "1.0.0",
+  "description": "A memory log util for JavaScript Applications",
+  "main": "index.js",
+  "scripts": {
+    "build": "zero build",
+    "bundle": "zero build --bundle",
+    "postversion": "npm publish",
+    "release": "np --no-yarn --no-publish",
+    "test": "zero test --coverage",
+    "test:watch": "zero test --watch",
+    "version": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helpscout/loggi.git"
+  },
+  "keywords": [
+    "log",
+    "logger",
+    "js-logger",
+    "console.log"
+  ],
+  "author": "Maxi Ferreira <charca@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/helpscout/loggi/issues"
+  },
+  "homepage": "https://github.com/helpscout/loggi#readme",
+  "devDependencies": {
+    "@helpscout/zero": "0.0.9"
+  }
+}
