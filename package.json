@@ -6,6 +6,7 @@
   "scripts": {
     "build": "zero build",
     "bundle": "zero build --bundle",
+    "coverage": "nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
     "postversion": "npm publish",
     "release": "np --no-yarn --no-publish",
     "test": "zero test --coverage",
@@ -29,6 +30,8 @@
   },
   "homepage": "https://github.com/helpscout/loggi#readme",
   "devDependencies": {
-    "@helpscout/zero": "0.0.9"
+    "@helpscout/zero": "0.0.9",
+    "coveralls": "3.0.0",
+    "nyc": "11.7.1"
   }
 }

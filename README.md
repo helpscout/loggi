@@ -1,4 +1,7 @@
 # loggi
+
+[![Build Status](https://travis-ci.org/helpscout/loggi.svg?branch=master)](https://travis-ci.org/helpscout/loggi) [![Coverage Status](https://coveralls.io/repos/github/helpscout/loggi/badge.svg?branch=master)](https://coveralls.io/github/helpscout/loggi?branch=master) [![npm version](https://badge.fury.io/js/loggi.svg)](https://badge.fury.io/js/loggi)
+
 > A memory log util for JavaScript Applications
 
 ## Table of contents
