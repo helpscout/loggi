@@ -1,0 +1,5 @@
+
+Todo:
+  ☐ New `namespace` option
+  ☐ New `showTimestamp` option
+  ☐ Add color codes to different log levels. Check out: https://medium.com/dev-channel/pretty-printing-d80639fb8881
