@@ -1,6 +1,6 @@
 {
   "name": "loggi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A memory log util for JavaScript Applications",
   "main": "dist/index.js",
   "scripts": {
