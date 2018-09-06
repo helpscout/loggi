@@ -2,7 +2,7 @@
   "name": "loggi",
   "version": "1.0.0",
   "description": "A memory log util for JavaScript Applications",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "zero build",
     "bundle": "zero build --bundle",
