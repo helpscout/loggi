@@ -1,9 +1,8 @@
-import createLogger from '../'
-import {
+import createLogger, {
   LOG_LEVELS,
   LOG_METHODS,
   LOG_METHOD_LEVELS,
-} from '../constants'
+} from '../'
 
 describe('loggi tests', () => {
   const logSpy = jest.spyOn(console, 'log').mockImplementation()

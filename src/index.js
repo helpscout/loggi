@@ -4,6 +4,29 @@ import {
   LOG_METHOD_LEVELS,
 } from './constants'
 
+/**
+ * Prints the arguments in the console using the provided method.
+ *
+ * @param {string} method
+ * @param  {...any} args
+ */
+const print = (method, ...args) => console[method](...args)
+
+/**
+ * Determines if the method should print to the console.
+ *
+ * @param {string} method
+ * @param {string} logLevel
+ * @returns {boolean}
+ */
+const shouldPrint = (method, logLevel) => LOG_METHOD_LEVELS[method] >= logLevel
+
+/**
+ * Logger constructor function
+ *
+ * @param {object} userOptions
+ * @returns {object}
+ */
 const createLogger = (userOptions = {}) => {
   const defaults = {
     logLevel: LOG_LEVELS.DEBUG,
@@ -16,10 +39,13 @@ const createLogger = (userOptions = {}) => {
 
   let history = []
 
-  const shouldPrint = method => LOG_METHOD_LEVELS[method] >= options.logLevel
-
-  const print = (method, ...args) => console[method](...args)
-
+  /**
+   * Saves the log in memory and prints it out,
+   * depending on the log level.
+   *
+   * @param {string} method
+   * @param  {...any} args
+   */
   const log = (method, ...args) => {
     history.push({
       method,
@@ -29,9 +55,13 @@ const createLogger = (userOptions = {}) => {
 
     history = history.slice(0, options.maxMemoryLogs)
 
-    shouldPrint(method) && print(method, ...args)
+    shouldPrint(method, options.logLevel) && print(method, ...args)
   }
 
+  /**
+   * Loops through the history array and prints all messages
+   * from the logger's memory.
+   */
   const debug = () => {
     history.map(({ method, args }) => print(method, ...args))
   }
@@ -49,3 +79,4 @@ const createLogger = (userOptions = {}) => {
 }
 
 export default createLogger
+export { LOG_LEVELS, LOG_METHODS, LOG_METHOD_LEVELS }
