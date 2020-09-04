@@ -34,7 +34,7 @@
     "bl": "3.0.0",
     "braces": "3.0.2",
     "coveralls": "3.0.0",
-    "handlebars": "4.1.2",
+    "handlebars": "4.4.5",
     "js-yaml": "3.13.1",
     "lodash": "4.17.11",
     "nyc": "11.7.1"
